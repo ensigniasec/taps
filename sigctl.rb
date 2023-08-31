@@ -5,20 +5,20 @@
 class Sigctl < Formula
   desc ""
   homepage "https://github.com/ensigniasec/sigctl"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.3/sigctl_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3cede0a1daeb277ac39d1dbb0161c77abcca998428c3ca5b8a338f4710c39433"
+      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.4/sigctl_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1de199c0f407f878ef3df5c2f4f0199a615f90c041bd1eb35d3fc34c2191642f"
 
       def install
         bin/sigctl
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.3/sigctl_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "1f404ec7d7d30700431ecbc9f8a11a32bc5e7fb9c8bf4f2452c4c4bde9c9b166"
+      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.4/sigctl_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5266fe173176ee15bab4c4ac8bee9ba5e866de765c722a11d6b13d232355837a"
 
       def install
         bin/sigctl
@@ -28,16 +28,16 @@ class Sigctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.3/sigctl_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "01d9d292a039029b282c8676197887b614ad33561f5455ec18c808a21281fd6c"
+      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.4/sigctl_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "31fc64de79d837911453585c829adc82be29185ee4138f3768d424f82cece641"
 
       def install
         bin/sigctl
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.3/sigctl_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "fe0dd9a2bf1cc22851be10822578da59ba5c18fbb5e0e68ea9330c953147adb3"
+      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.4/sigctl_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "70f8f59f733cc45a8a74a0f9b62e911895c7654532e855a7bf28ed86cf01b81d"
 
       def install
         bin/sigctl
