@@ -5,39 +5,29 @@
 class Sigctl < Formula
   desc ""
   homepage "https://github.com/ensigniasec/sigctl"
-  version "0.1.4"
+  version "0.1.7"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.4/sigctl_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "1de199c0f407f878ef3df5c2f4f0199a615f90c041bd1eb35d3fc34c2191642f"
+    url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.7/sigctl_Darwin_all.tar.gz", using: CurlDownloadStrategy
+    sha256 "014c6f4c53420d5687133e2b145e506c2794fa43921f1dfe1421b9a4c683118c"
 
-      def install
-        bin/sigctl
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.4/sigctl_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "5266fe173176ee15bab4c4ac8bee9ba5e866de765c722a11d6b13d232355837a"
-
-      def install
-        bin/sigctl
-      end
+    def install
+      bin/sigctl
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.4/sigctl_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "31fc64de79d837911453585c829adc82be29185ee4138f3768d424f82cece641"
+      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.7/sigctl_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "728e82e327a0f0990d05f21828f9d724c64409d85bb4ce862b22110fe0eded77"
 
       def install
         bin/sigctl
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.4/sigctl_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "70f8f59f733cc45a8a74a0f9b62e911895c7654532e855a7bf28ed86cf01b81d"
+      url "https://github.com/ensigniasec/sigctl/releases/download/v0.1.7/sigctl_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "57e3707e4a07a4baeea56e846b01895a7c1f90d6f0a62bc1981c50059677561a"
 
       def install
         bin/sigctl
