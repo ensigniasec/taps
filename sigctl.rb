@@ -5,11 +5,11 @@
 class Sigctl < Formula
   desc ""
   homepage "https://github.com/ensigniasec/sigctl"
-  version "0.2.3"
+  version "0.2.4"
 
   on_macos do
-    url "https://github.com/ensigniasec/sigctl/releases/download/v0.2.3/sigctl_Darwin_all.tar.gz", using: CurlDownloadStrategy
-    sha256 "515a65e976d9e5dec90a49de3445b9c061ad3a27a45fd3ff52df3558110c8c39"
+    url "https://github.com/ensigniasec/sigctl/releases/download/v0.2.4/sigctl_Darwin_all.tar.gz", using: CurlDownloadStrategy
+    sha256 "703419f2a60316d290bf0359628ce87013514383fe290916750f6469bbe41829"
 
     def install
       bin/sigctl
@@ -18,16 +18,16 @@ class Sigctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.2.3/sigctl_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "581ca6a0f1dc1710cad49544cbb4ba073d50b42ddafcddb13e37c0dfec049357"
+      url "https://github.com/ensigniasec/sigctl/releases/download/v0.2.4/sigctl_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "44432a870eed40078159397e0f1e022d24fbbfc681c040e7fc67eb14894d9880"
 
       def install
         bin/sigctl
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ensigniasec/sigctl/releases/download/v0.2.3/sigctl_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "21bb3187d688f1459a7ab31b96bbdb17524cd93dc6c3877797d04e8be6d85473"
+      url "https://github.com/ensigniasec/sigctl/releases/download/v0.2.4/sigctl_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "4fb210106609f019fff5e379117b45a229c651ffd4acc3cbd1a84587ed8ef56b"
 
       def install
         bin/sigctl
